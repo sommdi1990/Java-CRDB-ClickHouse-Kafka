@@ -28,6 +28,96 @@
 - ✅ امضای دیجیتال و مدیریت نسخه‌های اسناد
 - ✅ سیستم ارسال پیام‌ها (SMS, Email, Notification)
 - ✅ پشتیبانی از Mobile و PWA
+- ✅ سیستم مدیریت اسناد یکپارچه (Mayan EDMS)
+- ✅ سیستم تقویم پیشرفته با پشتیبانی از تقویم شمسی و میلادی
+- ✅ Transactional Outbox Pattern برای حل مشکل Dual-Write
+
+## 📋 صورت مسئله و چالش‌ها
+
+### چالش‌های موجود
+
+این پروژه برای حل چالش‌های زیر طراحی شده است:
+
+1. **نیاز به سیستم یکپارچه برای مدیریت چندین دامنه تجاری**
+    - مدیریت چندین دامنه تجاری در یک پلتفرم
+    - جداسازی منطقی دامنه‌ها با حفظ یکپارچگی
+    - استفاده از معماری DDD برای مدیریت پیچیدگی
+
+2. **نیاز به گزارش‌دهی پویا و انعطاف‌پذیر**
+    - گزارش‌های استاندارد با JasperServer
+    - گزارش‌های کاملاً پویا با DynamicReports
+    - گزارش‌های حسابداری (ترازنامه، سود و زیان، گردش حساب، دفتر کل، دفتر معین)
+    - GraphQL API برای کوئری‌های پیشرفته
+
+3. **نیاز به مقیاس‌پذیری و کارایی بالا**
+    - معماری میکروسرویس برای مقیاس‌پذیری افقی
+    - استفاده از CockroachDB برای distributed SQL
+    - استفاده از ClickHouse برای تحلیل لاگ‌ها و آمارها
+    - Redis برای caching و بهبود عملکرد
+
+4. **نیاز به امنیت و مدیریت دسترسی پیشرفته**
+    - Keycloak برای Identity & Access Management
+    - OAuth 2.0 و OpenID Connect
+    - مدیریت نقش‌ها و دسترسی‌ها
+    - امنیت در سطح API و سرویس
+
+5. **نیاز به مانیتورینگ و تحلیل لاگ‌ها**
+    - Grafana + Prometheus برای metrics
+    - Spring Boot Admin برای application monitoring
+    - ClickHouse برای تحلیل لاگ‌ها
+    - Centralized logging
+
+6. **نیاز به مدیریت اسناد و فایل‌ها**
+    - سیستم آرشیو اسناد و فایل‌ها
+    - Mayan EDMS برای مدیریت اسناد یکپارچه
+    - Document Versioning برای مدیریت نسخه‌های اسناد
+    - eSignature برای امضای دیجیتال
+
+7. **نیاز به سیستم تقویم و مدیریت رویدادها**
+    - سیستم تقویم پیشرفته شبیه Google Calendar
+    - پشتیبانی از تقویم شمسی (Persian/Jalali) و میلادی (Gregorian)
+    - مدیریت رویدادها و یادآوری‌ها
+    - تقویم‌های اشتراکی و گروهی
+
+8. **نیاز به سیستم حسابداری کامل**
+    - مدیریت اسناد حسابداری (سند، فاکتور، چک، و غیره)
+    - مدیریت حساب‌ها (کل، معین، تفصیلی)
+    - دفاتر سالیانه (دفتر کل، معین، روزنامه)
+    - گزارشات مالی و حسابداری
+
+9. **نیاز به حل مشکل Dual-Write در میکروسرویس‌ها**
+    - Transactional Outbox Pattern برای reliable event publishing
+    - حل مشکل inconsistency بین database و message queue
+    - تضمین ارسال events (at-least-once delivery)
+
+10. **نیاز به سیستم ارسال پیام‌ها**
+    - ارسال SMS از طریق gatewayهای مختلف
+    - ارسال Email با template management
+    - Push Notifications و In-app Notifications
+    - Delivery tracking و retry mechanism
+
+11. **نیاز به پشتیبانی از Mobile و Web Responsive**
+    - Mobile Application (React Native یا PWA)
+    - Web Responsive (Mobile-first design)
+    - PWA (Progressive Web App) با offline capability
+
+### راه‌حل پیشنهادی
+
+پیاده‌سازی یک پلتفرم مبتنی بر میکروسرویس با استفاده از:
+
+- **Backend**: Java Spring Boot 3.2.x با معماری DDD
+- **Frontend**: React + TypeScript با معماری Micro Frontends
+- **Database**: CockroachDB (اصلی) + ClickHouse (تحلیلی) + Redis (کش)
+- **Database Migration**: Flyway برای مدیریت schema و migrations
+- **Messaging**: Apache Kafka با Transactional Outbox Pattern
+- **Security**: Keycloak برای Identity & Access Management
+- **Monitoring**: Grafana + Prometheus + Spring Boot Admin
+- **Infrastructure**: Docker + Nginx
+- **Document Management**: Mayan EDMS برای مدیریت اسناد یکپارچه
+- **Calendar System**: سیستم تقویم پیشرفته با پشتیبانی از تقویم شمسی و میلادی
+- **Accounting**: سیستم حسابداری کامل با گزارشات مالی
+
+برای جزئیات کامل، به [پروپوزال اولیه پروژه](./Java-CRDB-ClickHouse-Kafka.wiki/Proposal.md) مراجعه کنید.
 
 ## 🏗️ معماری سیستم
 
@@ -43,7 +133,7 @@ Business Services (DDD) + Infrastructure Services
 Data Layer (CockroachDB / ClickHouse / Redis / Kafka)
 ```
 
-برای جزئیات بیشتر، به [مستندات معماری](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture/Home.md) مراجعه کنید.
+برای جزئیات بیشتر، به [مستندات معماری](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture-Home.md) مراجعه کنید.
 
 ## 🛠️ تکنولوژی‌های استفاده شده
 
@@ -179,7 +269,7 @@ npm install
 npm run dev
 ```
 
-برای راهنمای کامل، به [مستندات راهنمای شروع](./Java-CRDB-ClickHouse-Kafka.wiki/Development/Getting-Started.md) مراجعه
+برای راهنمای کامل، به [مستندات راهنمای شروع](./Java-CRDB-ClickHouse-Kafka.wiki/Development-Getting-Started.md) مراجعه
 کنید.
 
 ## 📚 مستندات
@@ -192,24 +282,24 @@ npm run dev
 
 ### مستندات فنی
 
-- [🏗️ معماری سیستم](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture/Home.md)
-- [🔧 کامپوننت‌های Backend](./Java-CRDB-ClickHouse-Kafka.wiki/Backend/Home.md)
-- [🎨 کامپوننت‌های Frontend](./Java-CRDB-ClickHouse-Kafka.wiki/Frontend/Home.md)
-- [🗄️ دیتابیس‌ها](./Java-CRDB-ClickHouse-Kafka.wiki/Database/Home.md)
-- [🔐 سیستم‌های امنیتی](./Java-CRDB-ClickHouse-Kafka.wiki/Security/Home.md)
-- [📊 مانیتورینگ و لاگینگ](./Java-CRDB-ClickHouse-Kafka.wiki/Monitoring/Home.md)
-- [🐳 Docker](./Java-CRDB-ClickHouse-Kafka.wiki/Docker/Home.md)
-- [🔄 Kafka و Messaging](./Java-CRDB-ClickHouse-Kafka.wiki/Kafka/Home.md)
-- [🌐 Nginx و Routing](./Java-CRDB-ClickHouse-Kafka.wiki/Nginx/Home.md)
+- [🏗️ معماری سیستم](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture-Home.md)
+- [🔧 کامپوننت‌های Backend](./Java-CRDB-ClickHouse-Kafka.wiki/Backend-Home.md)
+- [🎨 کامپوننت‌های Frontend](./Java-CRDB-ClickHouse-Kafka.wiki/Frontend-Home.md)
+- [🗄️ دیتابیس‌ها](./Java-CRDB-ClickHouse-Kafka.wiki/Database-Home.md)
+- [🔐 سیستم‌های امنیتی](./Java-CRDB-ClickHouse-Kafka.wiki/Security-Home.md)
+- [📊 مانیتورینگ و لاگینگ](./Java-CRDB-ClickHouse-Kafka.wiki/Monitoring-Home.md)
+- [🐳 Docker](./Java-CRDB-ClickHouse-Kafka.wiki/Docker-Home.md)
+- [🔄 Kafka و Messaging](./Java-CRDB-ClickHouse-Kafka.wiki/Kafka-Home.md)
+- [🌐 Nginx و Routing](./Java-CRDB-ClickHouse-Kafka.wiki/Nginx-Home.md)
 
 ### مستندات بیزینسی
 
-- [📝 مستندات بیزینسی](./Java-CRDB-ClickHouse-Kafka.wiki/Business/Home.md)
+- [📝 مستندات بیزینسی](./Java-CRDB-ClickHouse-Kafka.wiki/Business-Home.md)
 
 ### راهنماهای توسعه
 
-- [🧪 تست و کیفیت](./Java-CRDB-ClickHouse-Kafka.wiki/Testing/Home.md)
-- [💻 راهنماهای توسعه](./Java-CRDB-ClickHouse-Kafka.wiki/Development/Home.md)
+- [🧪 تست و کیفیت](./Java-CRDB-ClickHouse-Kafka.wiki/Testing-Home.md)
+- [💻 راهنماهای توسعه](./Java-CRDB-ClickHouse-Kafka.wiki/Development-Home.md)
 
 ## 🔄 CI/CD
 
@@ -221,7 +311,7 @@ npm run dev
 - ✅ Automated deployment
 - ✅ Version management
 
-برای جزئیات بیشتر، به [مستندات CI/CD](./Java-CRDB-ClickHouse-Kafka.wiki/CI-CD/Home.md) مراجعه کنید.
+برای جزئیات بیشتر، به [مستندات CI/CD](./Java-CRDB-ClickHouse-Kafka.wiki/CI-CD-Home.md) مراجعه کنید.
 
 ## 🔒 امنیت
 
@@ -230,7 +320,7 @@ npm run dev
 - Non-root user در containers
 - Security scanning با Trivy و Snyk
 
-برای جزئیات بیشتر، به [مستندات امنیت Docker](./Java-CRDB-ClickHouse-Kafka.wiki/Docker/Docker-Security.md) مراجعه کنید.
+برای جزئیات بیشتر، به [مستندات امنیت Docker](./Java-CRDB-ClickHouse-Kafka.wiki/Docker-Docker-Security.md) مراجعه کنید.
 
 ## 📊 مانیتورینگ
 
@@ -249,7 +339,7 @@ npm run dev
 4. Push کنید (`git push origin feature/AmazingFeature`)
 5. یک Pull Request باز کنید
 
-برای جزئیات بیشتر، به [Git Workflow](./Java-CRDB-ClickHouse-Kafka.wiki/Development/Git-Workflow.md) مراجعه کنید.
+برای جزئیات بیشتر، به [Git Workflow](./Java-CRDB-ClickHouse-Kafka.wiki/Development-Git-Workflow.md) مراجعه کنید.
 
 ## 📄 لایسنس
 
