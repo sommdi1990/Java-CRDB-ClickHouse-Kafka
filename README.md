@@ -20,6 +20,7 @@
 - ✅ مدیریت یکپارچه کاربران و احراز هویت
 - ✅ سیستم مدیریت روندهای کاری (Workflow) و نقش‌های تجاری
 - ✅ سیستم گزارش‌دهی پیشرفته (JasperServer + DynamicReports)
+- ✅ Document Generator Service (Puppeteer) برای تولید مستندات چند صفحه‌ای از HTML به PDF
 - ✅ مدیریت دامنه‌های تجاری با معماری DDD
 - ✅ سیستم حسابداری کامل با اسناد، حساب‌ها و دفاتر سالیانه
 - ✅ مانیتورینگ و لاگینگ پیشرفته
@@ -145,6 +146,7 @@ Data Layer (CockroachDB / ClickHouse / Redis / Kafka)
 - **Spring GraphQL** - GraphQL API
 - **Camunda BPM** - Workflow Engine
 - **JasperServer + DynamicReports** - گزارش‌دهی
+- **Puppeteer** - Document Generator Service (HTML to PDF)
 - **Apache Kafka** - Messaging
 - **Keycloak** - Identity & Access Management
 - **Accounting Service** - سیستم حسابداری کامل
@@ -199,6 +201,7 @@ Java-CRDB-ClickHouse-Kafka/
 │   ├── infrastructure-service/      # زیرساخت و امنیت
 │   ├── workflow-service/            # مدیریت روندهای کاری
 │   ├── report-manager-service/      # مدیریت گزارش‌ها
+│   │   └── document-generator/      # Document Generator Service (Puppeteer)
 │   ├── gateway-ui/                  # Gateway برای UI
 │   ├── gateway-external/            # Gateway برای APIهای خارجی
 │   ├── gateway-input/               # Gateway برای سرویس‌های ورودی
