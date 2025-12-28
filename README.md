@@ -106,7 +106,7 @@
 
 پیاده‌سازی یک پلتفرم مبتنی بر میکروسرویس با استفاده از:
 
-- **Backend**: Java Spring Boot 3.2.x با معماری DDD
+- **Backend**: Java Spring Boot 4.0.1 با معماری DDD و پشتیبانی از GraalVM Native
 - **Frontend**: React + TypeScript با معماری Micro Frontends
 - **Database**: CockroachDB (اصلی) + ClickHouse (تحلیلی) + Redis (کش)
 - **Database Migration**: Flyway برای مدیریت schema و migrations
@@ -140,7 +140,7 @@ Data Layer (CockroachDB / ClickHouse / Redis / Kafka)
 
 ### Backend
 
-- **Java Spring Boot 3.2.x** - Framework اصلی
+- **Java Spring Boot 4.0.1** - Framework اصلی (با پشتیبانی از GraalVM Native)
 - **Spring Security** - امنیت
 - **Spring Cloud** - میکروسرویس
 - **Spring GraphQL** - GraphQL API
@@ -302,6 +302,7 @@ npm run dev
 
 - [🏗️ معماری سیستم](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture-Home.md)
 - [🔧 کامپوننت‌های Backend](./Java-CRDB-ClickHouse-Kafka.wiki/Backend-Home.md)
+- [🚀 راهنمای کامل GraalVM Native](./Java-CRDB-ClickHouse-Kafka.wiki/GraalVM-Native.md) ⭐
 - [🎨 کامپوننت‌های Frontend](./Java-CRDB-ClickHouse-Kafka.wiki/Frontend-Home.md)
 - [🗄️ دیتابیس‌ها](./Java-CRDB-ClickHouse-Kafka.wiki/Database-Home.md)
 - [🔐 سیستم‌های امنیتی](./Java-CRDB-ClickHouse-Kafka.wiki/Security-Home.md)
