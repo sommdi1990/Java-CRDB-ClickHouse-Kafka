@@ -113,7 +113,7 @@
 - **Messaging**: Apache Kafka با Transactional Outbox Pattern
 - **Security**: Keycloak برای Identity & Access Management
 - **Monitoring**: Grafana + Prometheus + Spring Boot Admin
-- **Infrastructure**: Docker + Nginx
+- **Infrastructure**: Docker + Docker Compose + Kubernetes (برای production و stage) + Nginx
 - **Document Management**: Mayan EDMS برای مدیریت اسناد یکپارچه
 - **Calendar System**: سیستم تقویم پیشرفته با پشتیبانی از تقویم شمسی و میلادی
 - **Accounting**: سیستم حسابداری کامل با گزارشات مالی
@@ -180,10 +180,14 @@ Data Layer (CockroachDB / ClickHouse / Redis / Kafka)
 ### Infrastructure
 
 - **Docker** - Containerization
-- **Docker Compose** - Orchestration
-- **Nginx** - Reverse Proxy & Load Balancer
-- **Grafana + Prometheus** - Monitoring
+- **Docker Compose** - Orchestration (برای development)
+- **Kubernetes** - Container Orchestration (برای production و stage environments)
+- **Nginx** - Reverse Proxy, Load Balancer & Ingress Controller
+- **Grafana + Prometheus** - Monitoring و Observability
 - **Spring Boot Admin** - Application Monitoring
+- **VPN Gateway** (OpenVPN/WireGuard) - دسترسی امن از راه دور
+- **VMware ESXi 8.0** - مجازی‌سازی و مدیریت VMها
+- **Rocky Linux 9** - سیستم عامل سرورها
 
 ### Testing
 
@@ -278,6 +282,17 @@ npm run dev
 ## 📚 مستندات
 
 تمام مستندات پروژه در پوشه [Java-CRDB-ClickHouse-Kafka.wiki](./Java-CRDB-ClickHouse-Kafka.wiki/) قرار دارد:
+
+### مستندات کلیدی
+
+- 📋 **[پروپوزال اولیه پروژه](./Java-CRDB-ClickHouse-Kafka.wiki/Proposal.md)** - مستندات کامل پروپوزال، معماری، و توجیهات
+  فنی و بیزینسی
+- 🏗️ **[معماری سیستم](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture-Home.md)** - معماری کلی، میکروسرویس‌ها، DDD، امنیت
+- ☸️ **[راهنمای کامل Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Kubernetes.md)** - از صفر تا صد Kubernetes برای
+  production و stage
+- 🖥️ **[زیرساخت و Infrastructure](./Java-CRDB-ClickHouse-Kafka.wiki/Infrastructure-Setup.md)** - VMware ESXi، VPN
+  Gateway، مدیریت از راه دور
+- 🔗 **[فهرست لینک‌های مفید](./Java-CRDB-ClickHouse-Kafka.wiki/References.md)** - تمام لینک‌های مستندات رسمی
 
 ### مستندات اصلی
 
