@@ -114,6 +114,8 @@
 - **Security**: Keycloak برای Identity & Access Management
 - **Monitoring**: Grafana + Prometheus + Spring Boot Admin
 - **Infrastructure**: Docker + Docker Compose + Kubernetes (برای production و stage) + Nginx
+- **Kubernetes Infrastructure**: دو سرور فیزیکی (64GB RAM هر کدام) با VMware ESXi 8، Rocky Linux 10، و Kubernetes
+  Cluster مرکزی
 - **Document Management**: Mayan EDMS برای مدیریت اسناد یکپارچه
 - **Calendar System**: سیستم تقویم پیشرفته با پشتیبانی از تقویم شمسی و میلادی
 - **Accounting**: سیستم حسابداری کامل با گزارشات مالی
@@ -147,7 +149,7 @@ Data Layer (CockroachDB / ClickHouse / Redis / Kafka)
 - **Camunda BPM** - Workflow Engine
 - **JasperServer + DynamicReports** - گزارش‌دهی
 - **Puppeteer** - Document Generator Service (HTML to PDF)
-- **Apache Kafka** - Messaging
+- **Apache Kafka / Redpanda** - Messaging (توصیه: Redpanda برای performance بهتر)
 - **Keycloak** - Identity & Access Management
 - **Accounting Service** - سیستم حسابداری کامل
 - **Transactional Outbox Pattern** - حل مشکل Dual-Write
@@ -187,7 +189,8 @@ Data Layer (CockroachDB / ClickHouse / Redis / Kafka)
 - **Spring Boot Admin** - Application Monitoring
 - **VPN Gateway** (OpenVPN/WireGuard) - دسترسی امن از راه دور
 - **VMware ESXi 8.0** - مجازی‌سازی و مدیریت VMها
-- **Rocky Linux 9** - سیستم عامل سرورها
+- **Rocky Linux 10** - سیستم عامل سرورها (برای Kubernetes Cluster)
+- **Rocky Linux 9** - سیستم عامل سرورها (برای سایر محیط‌ها)
 
 ### Testing
 
@@ -287,6 +290,12 @@ npm run dev
 
 - 📋 **[پروپوزال اولیه پروژه](./Java-CRDB-ClickHouse-Kafka.wiki/Proposal.md)** - مستندات کامل پروپوزال، معماری، و توجیهات
   فنی و بیزینسی
+- ☸️ **[پروپوزال Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Proposal-Kubernetes.md)** ⭐ - پروپوزال کامل برای
+  راه‌اندازی Kubernetes روی دو سرور فیزیکی با VMware ESXi 8
+- 🔧 **[راهنمای فنی پیاده‌سازی Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Kubernetes-Implementation-Guide.md)** ⭐ -
+  راهنمای قدم به قدم پیاده‌سازی Kubernetes
+- 📅 **[گانت چارت Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Gantt-Plan-Kubernetes.md)** ⭐ - برنامه‌ریزی زمانی برای
+  پیاده‌سازی Kubernetes (4 اسپرینت سه‌هفته‌ای)
 - 🏗️ **[معماری سیستم](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture-Home.md)** - معماری کلی، میکروسرویس‌ها، DDD، امنیت
 - ☸️ **[راهنمای کامل Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Kubernetes.md)** - از صفر تا صد Kubernetes برای
   production و stage
@@ -297,6 +306,11 @@ npm run dev
 ### مستندات اصلی
 
 - [📋 پروپوزال اولیه پروژه](./Java-CRDB-ClickHouse-Kafka.wiki/Proposal.md) - مستندات کامل پروپوزال و توجیهات
+- [☸️ پروپوزال Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Proposal-Kubernetes.md) ⭐ - پروپوزال کامل برای راه‌اندازی
+  Kubernetes
+- [🔧 راهنمای فنی پیاده‌سازی Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Kubernetes-Implementation-Guide.md) ⭐ -
+  راهنمای قدم به قدم
+- [📅 گانت چارت Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Gantt-Plan-Kubernetes.md) ⭐ - برنامه‌ریزی زمانی
 
 ### مستندات فنی
 
@@ -309,6 +323,7 @@ npm run dev
 - [📊 مانیتورینگ و لاگینگ](./Java-CRDB-ClickHouse-Kafka.wiki/Monitoring-Home.md)
 - [🐳 Docker](./Java-CRDB-ClickHouse-Kafka.wiki/Docker-Home.md)
 - [🔄 Kafka و Messaging](./Java-CRDB-ClickHouse-Kafka.wiki/Kafka-Home.md)
+- [☸️ Kubernetes و Orchestration](./Java-CRDB-ClickHouse-Kafka.wiki/Kubernetes.md)
 - [🌐 Nginx و Routing](./Java-CRDB-ClickHouse-Kafka.wiki/Nginx-Home.md)
 
 ### مستندات بیزینسی
