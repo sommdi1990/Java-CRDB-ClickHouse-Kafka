@@ -294,6 +294,8 @@ npm run dev
   راه‌اندازی Kubernetes روی دو سرور فیزیکی با VMware ESXi 8
 - 🔧 **[راهنمای فنی پیاده‌سازی Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Kubernetes-Implementation-Guide.md)** ⭐ -
   راهنمای قدم به قدم پیاده‌سازی Kubernetes
+- 🐳 **[راه‌اندازی Registry و Nexus](./Java-CRDB-ClickHouse-Kafka.wiki/Infrastructure-Registry-Nexus-Setup.md)** ⭐ -
+  راهنمای کامل راه‌اندازی Docker Registry و Nexus Repository Manager
 - 📅 **[گانت چارت Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Gantt-Plan-Kubernetes.md)** ⭐ - برنامه‌ریزی زمانی برای
   پیاده‌سازی Kubernetes (4 اسپرینت سه‌هفته‌ای)
 - 🏗️ **[معماری سیستم](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture-Home.md)** - معماری کلی، میکروسرویس‌ها، DDD، امنیت
