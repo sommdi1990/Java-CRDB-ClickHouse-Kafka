@@ -296,6 +296,9 @@ npm run dev
   راهنمای قدم به قدم پیاده‌سازی Kubernetes
 - 🐳 **[راه‌اندازی Registry و Nexus](./Java-CRDB-ClickHouse-Kafka.wiki/Infrastructure-Registry-Nexus-Setup.md)** ⭐ -
   راهنمای کامل راه‌اندازی Docker Registry و Nexus Repository Manager
+- 📦 **[لیست کامل Images و Helm Charts](./Java-CRDB-ClickHouse-Kafka.wiki/Complete-Images-Manifests-Helm-Charts-List.md)
+  ** ⭐ -
+  لیست کامل تمام images، manifests و Helm charts مورد نیاز برای راه‌اندازی از صفر تا صد
 - 📅 **[گانت چارت Kubernetes](./Java-CRDB-ClickHouse-Kafka.wiki/Gantt-Plan-Kubernetes.md)** ⭐ - برنامه‌ریزی زمانی برای
   پیاده‌سازی Kubernetes (4 اسپرینت سه‌هفته‌ای)
 - 🏗️ **[معماری سیستم](./Java-CRDB-ClickHouse-Kafka.wiki/Architecture-Home.md)** - معماری کلی، میکروسرویس‌ها، DDD، امنیت
