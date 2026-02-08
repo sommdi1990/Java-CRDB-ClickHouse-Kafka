@@ -354,12 +354,21 @@ npm run dev
 
 ## 🔒 امنیت
 
+- ✅ **راهنمای جامع استانداردهای امنیتی OWASP
+  ** - [راهنمای کامل OWASP](./Java-CRDB-ClickHouse-Kafka.wiki/Security-OWASP-Comprehensive-Guide.md) ⭐
+    - OWASP Top 10 (2021) - 10 آسیب‌پذیری رایج
+    - OWASP API Security Top 10
+    - OWASP ASVS (Application Security Verification Standard)
+    - OWASP Dependency Check برای اسکن وابستگی‌ها
+    - OWASP ZAP برای تست نفوذ خودکار
 - استفاده از Docker Secrets برای مدیریت اطلاعات حساس
 - Multi-stage builds برای کاهش اندازه و افزایش امنیت imageها
 - Non-root user در containers
 - Security scanning با Trivy و Snyk
+- پیاده‌سازی ابزارهای امنیتی در Kubernetes: Trivy Operator, Falco, OPA Gatekeeper/Kyverno
 
-برای جزئیات بیشتر، به [مستندات امنیت Docker](./Java-CRDB-ClickHouse-Kafka.wiki/Docker-Docker-Security.md) مراجعه کنید.
+برای جزئیات بیشتر، به [مستندات امنیت Docker](./Java-CRDB-ClickHouse-Kafka.wiki/Docker-Docker-Security.md)
+و [راهنمای جامع OWASP](./Java-CRDB-ClickHouse-Kafka.wiki/Security-OWASP-Comprehensive-Guide.md) مراجعه کنید.
 
 ## 📊 مانیتورینگ
 
