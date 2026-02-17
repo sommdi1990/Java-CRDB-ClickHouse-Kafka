@@ -1,73 +1,48 @@
-import tarfile
-import yaml
 import os
 import sys
+import subprocess
+import re
 
 PRIVATE_REGISTRY = "rr.alefba2.ir"
 
 
-def is_valid_image(image):
-    if not image:
-        return False
-    image = image.strip()
-    if ":" not in image:
-        return False
-    if image.endswith(":"):
-        return False
-    return True
+def run_helm_template(chart_file):
+    try:
+        result = subprocess.run(
+            ["helm", "template", chart_file],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        return result.stdout
+    except subprocess.CalledProcessError as e:
+        print("❌ Helm template failed:")
+        print(e.stderr)
+        sys.exit(1)
 
 
-def normalize_image(image):
-    image = image.strip()
-
-    # اگر registry نداشت implicit docker.io هست
-    # ولی نیازی نیست docker.io اضافه کنیم
-    return image
-
-
-def extract_images(data, images):
-    if isinstance(data, dict):
-
-        # حالت repository + tag
-        if "repository" in data:
-            repo = data.get("repository")
-            tag = data.get("tag")
-            if repo and tag:
-                img = f"{repo}:{tag}"
-                if is_valid_image(img):
-                    images.add(normalize_image(img))
-
-        # حالت image: nginx:1.2.3
-        if "image" in data and isinstance(data["image"], str):
-            img = data["image"]
-            if is_valid_image(img):
-                images.add(normalize_image(img))
-
-        for value in data.values():
-            extract_images(value, images)
-
-    elif isinstance(data, list):
-        for item in data:
-            extract_images(item, images)
-
-
-def extract_from_chart(tgz_path):
+def extract_images_from_manifest(manifest):
     images = set()
 
-    with tarfile.open(tgz_path, "r:gz") as tar:
-        for member in tar.getmembers():
-            if member.name.endswith("values.yaml"):
-                f = tar.extractfile(member)
-                if f:
-                    content = yaml.safe_load(f.read())
-                    if content:
-                        extract_images(content, images)
+    # هر خطی که image: داشته باشه
+    pattern = re.compile(r'image:\s*"?([^"\s]+)"?')
+
+    matches = pattern.findall(manifest)
+
+    for img in matches:
+        img = img.strip()
+
+        # حذف ایمیج بدون tag
+        if ":" not in img or img.endswith(":"):
+            continue
+
+        images.add(img)
 
     return images
 
 
-def generate_script(tgz_path, images):
-    base_name = os.path.splitext(os.path.basename(tgz_path))[0]
+def generate_script(chart_file, images):
+    base_name = os.path.splitext(os.path.basename(chart_file))[0]
     output_file = f"{base_name}.txt"
 
     with open(output_file, "w", encoding="utf-8") as f:
@@ -93,7 +68,7 @@ def generate_script(tgz_path, images):
         for img in sorted(images):
             f.write(f"docker push {PRIVATE_REGISTRY}/{img}\n")
 
-    print(f"\n✅ {len(images)} valid images extracted.")
+    print(f"\n✅ {len(images)} images extracted from rendered manifest.")
     print(f"📄 Script created: {output_file}")
 
 
@@ -104,16 +79,20 @@ if __name__ == "__main__":
         print("  python extract_images.py <chart-file.tgz>")
         sys.exit(1)
 
-    tgz_file = sys.argv[1]
+    chart_file = sys.argv[1]
 
-    if not os.path.exists(tgz_file):
+    if not os.path.exists(chart_file):
         print("❌ File not found.")
         sys.exit(1)
 
-    images = extract_from_chart(tgz_file)
+    print("⏳ Running helm template...")
+    manifest = run_helm_template(chart_file)
+
+    print("🔎 Extracting images from rendered manifest...")
+    images = extract_images_from_manifest(manifest)
 
     if not images:
         print("⚠ No valid images found.")
         sys.exit(0)
 
-    generate_script(tgz_file, images)
+    generate_script(chart_file, images)
