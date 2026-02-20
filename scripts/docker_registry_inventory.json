@@ -1,0 +1,555 @@
+{
+  "aquasec/trivy-operator": [
+    "0.29.0",
+    "0.30.0"
+  ],
+  "argoproj/argo-rollouts": [
+    "v0.10.2"
+  ],
+  "argoproj/argocd": [
+    "v2.10.4",
+    "v3.3.0"
+  ],
+  "argoproj/argocd-repo-server": [
+    "v0.10.6"
+  ],
+  "argoprojlabs/argocd-image-updater": [
+    "v0.11.3"
+  ],
+  "argoprojlabs/argocd-notifications": [
+    "v1.2.1"
+  ],
+  "atlassian/confluence": [
+    "8.7.2",
+    "10.2.2"
+  ],
+  "atlassian/jira-software": [
+    "9.12.0",
+    "11.3.1"
+  ],
+  "bats/bats": [
+    "v1.4.1",
+    "1.13.0"
+  ],
+  "bitnami/postgresql": [
+    "11.14.0-debian-10-r28",
+    "latest"
+  ],
+  "bitnamilegacy/kubectl": [
+    "1.35",
+    "1.33.4",
+    "1.29.7"
+  ],
+  "bitnamilegacy/postgres-exporter": [
+    "0.15.0-debian-11-r7"
+  ],
+  "bitnamilegacy/postgresql": [
+    "16.6.0"
+  ],
+  "bitnamilegacy/redis": [
+    "7.2.4-debian-12-r9"
+  ],
+  "bitnamilegacy/redis-exporter": [
+    "1.58.0-debian-12-r4"
+  ],
+  "busybox": [
+    "1.32"
+  ],
+  "calico/apiserver": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "calico/cni": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "calico/csi": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "calico/goldmane": [
+    "v3.31.3"
+  ],
+  "calico/kube-controllers": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "calico/node": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "calico/node-driver-registrar": [
+    "v3.31.3"
+  ],
+  "calico/pod2daemon-flexvol": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "calico/typha": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "calico/whisker": [
+    "v3.31.3"
+  ],
+  "calico/whisker-backend": [
+    "v3.31.3"
+  ],
+  "clickhouse/clickhouse-operator": [
+    "0.26.0"
+  ],
+  "clickhouse/clickhouse-server": [
+    "25.12.5"
+  ],
+  "cockroachdb/cockroach": [
+    "v24.3.25"
+  ],
+  "codecentric/spring-boot-admin": [
+    "2.6.7"
+  ],
+  "confluentinc/cp-kafka": [
+    "7.7.7"
+  ],
+  "confluentinc/cp-zookeeper": [
+    "7.7.7"
+  ],
+  "curlimages/curl": [
+    "8.12.0"
+  ],
+  "danielqsj/kafka-exporter": [
+    "v1.9.0"
+  ],
+  "dexidp/dex": [
+    "v2.44.0"
+  ],
+  "distroless/java21": [
+    "nonroot"
+  ],
+  "docker/library/redis": [
+    "8.2.3-alpine"
+  ],
+  "falcosecurity/falco": [
+    "0.43.0"
+  ],
+  "falcosecurity/falco-driver-loader": [
+    "0.43.0"
+  ],
+  "falcosecurity/falcoctl": [
+    "0.12.2"
+  ],
+  "falcosecurity/falcosidekick": [
+    "2.32.0"
+  ],
+  "gitlab/gitlab-ce": [
+    "17.0.0-ce.0"
+  ],
+  "gitlab/gitlab-runner": [
+    "v17.0.0"
+  ],
+  "gitlab-org/build/cng/certificates": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/gitaly": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/gitlab-base": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/gitlab-container-registry": [
+    "v4.33.0-gitlab"
+  ],
+  "gitlab-org/build/cng/gitlab-exporter": [
+    "16.2.0"
+  ],
+  "gitlab-org/build/cng/gitlab-kas": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/gitlab-shell": [
+    "v14.45.5"
+  ],
+  "gitlab-org/build/cng/gitlab-sidekiq-ee": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/gitlab-toolbox-ee": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/gitlab-webservice-ee": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/gitlab-workhorse-ee": [
+    "v18.8.4"
+  ],
+  "gitlab-org/build/cng/kubectl": [
+    "v18.8.4"
+  ],
+  "gitlab-org/cloud-native/mirror/images/ingress-nginx/controller": [
+    "v1.11.8"
+  ],
+  "gitlab-org/cloud-native/mirror/images/minio/mc": [
+    "RELEASE.2018-07-13T00-53-22Z"
+  ],
+  "gitlab-org/cloud-native/mirror/images/minio/minio": [
+    "RELEASE.2017-12-28T01-21-00Z"
+  ],
+  "gitlab-org/gitlab-runner": [
+    "alpine-v18.8.0"
+  ],
+  "grafana/agent": [
+    "v0.40.0",
+    "v0.44.7"
+  ],
+  "grafana/grafana": [
+    "11.2.1",
+    "12.3.3"
+  ],
+  "grafana/loki": [
+    "2.9.3",
+    "3.6",
+    "3.6.5"
+  ],
+  "grafana/loki-canary": [
+    "3.6.5"
+  ],
+  "grafana/loki-helm-test": [
+    "latest"
+  ],
+  "grafana/promtail": [
+    "3.6",
+    "2.9.3"
+  ],
+  "grafana/tempo": [
+    "2.3.1",
+    "2.10.0",
+    "2.9.0"
+  ],
+  "ingress-nginx/controller": [
+    "v1.10.1",
+    "v1.12.1",
+    "v1.10.0"
+  ],
+  "ingress-nginx/defaultbackend-amd64": [
+    "1.5"
+  ],
+  "ingress-nginx/kube-webhook-certgen": [
+    "v20231011-8b53cabe0",
+    "v1.5.2",
+    "v1.4.0",
+    "v20221220-controller-v1.5.1-58-g787ea74b6"
+  ],
+  "jenkins/jenkins": [
+    "2.452-jdk17",
+    "2.541.1-jdk21"
+  ],
+  "jetstack/cert-manager-cainjector": [
+    "v1.14.4",
+    "v1.18.0",
+    "v1.17.4",
+    "v1.19.3"
+  ],
+  "jetstack/cert-manager-controller": [
+    "v1.14.4",
+    "v1.18.0",
+    "v1.17.4",
+    "v1.19.3"
+  ],
+  "jetstack/cert-manager-ctl": [
+    "v1.14.4"
+  ],
+  "jetstack/cert-manager-startupapicheck": [
+    "v1.17.4",
+    "v1.19.3"
+  ],
+  "jetstack/cert-manager-webhook": [
+    "v1.14.4",
+    "v1.18.0",
+    "v1.17.4",
+    "v1.19.3"
+  ],
+  "jkroepke/kube-webhook-certgen": [
+    "1.7.7"
+  ],
+  "joxit/docker-registry-ui": [
+    "2.6.0"
+  ],
+  "k8s/coredns": [
+    "v1.11.1",
+    "v1.11.3"
+  ],
+  "k8s/csi-attacher": [
+    "v4.5.0",
+    "v4.9.0"
+  ],
+  "k8s/csi-node-driver-registrar": [
+    "v2.11.1",
+    "v2.14.0"
+  ],
+  "k8s/csi-provisioner": [
+    "v4.0.0",
+    "v4.0.1"
+  ],
+  "k8s/csi-resizer": [
+    "v1.10.0",
+    "v1.12.0"
+  ],
+  "k8s/etcd": [
+    "3.5.12-0",
+    "3.5.15-0",
+    "3.5.16-0"
+  ],
+  "k8s/kube-apiserver": [
+    "v1.29.7",
+    "v1.32.1"
+  ],
+  "k8s/kube-controller-manager": [
+    "v1.29.7",
+    "v1.32.1"
+  ],
+  "k8s/kube-proxy": [
+    "v1.29.7",
+    "v1.32.1"
+  ],
+  "k8s/kube-scheduler": [
+    "v1.29.7",
+    "v1.32.1"
+  ],
+  "k8s/metrics-server": [
+    "v0.7.0",
+    "v0.8.1"
+  ],
+  "k8s/pause": [
+    "3.10",
+    "3.10.1",
+    "3.9",
+    "3.8"
+  ],
+  "k8s/snapshot-controller": [
+    "v6.3.2",
+    "v8.4.0"
+  ],
+  "keycloak/keycloak": [
+    "26.5.2",
+    "17.0.1-legacy"
+  ],
+  "kiwigrid/k8s-sidecar": [
+    "1.27.4",
+    "2.5.0",
+    "1.30.9"
+  ],
+  "kube-state-metrics/kube-state-metrics": [
+    "v2.13.0",
+    "v2.18.0"
+  ],
+  "kubectl": [
+    "v1.34.3"
+  ],
+  "kubesphere/argocd-applicationset": [
+    "v0.4.1"
+  ],
+  "kyverno/background-controller": [
+    "v1.17.0"
+  ],
+  "kyverno/cleanup-controller": [
+    "v1.17.0"
+  ],
+  "kyverno/kyverno": [
+    "v1.17.0"
+  ],
+  "kyverno/kyverno-cli": [
+    "v1.17.0"
+  ],
+  "kyverno/kyvernopre": [
+    "v1.17.0"
+  ],
+  "kyverno/readiness-checker": [
+    "v0.1.0"
+  ],
+  "kyverno/reports-controller": [
+    "v1.17.0"
+  ],
+  "library/alpine": [
+    "3.19",
+    "3.22",
+    "latest"
+  ],
+  "library/busybox": [
+    "1.36"
+  ],
+  "library/debian": [
+    "stable-slim"
+  ],
+  "library/eclipse-temurin": [
+    "21-jdk-alpine",
+    "21-jre-alpine"
+  ],
+  "library/nextcloud": [
+    "28.0.4-apache",
+    "30.0.0-apache",
+    "32.0.6-apache"
+  ],
+  "library/nginx": [
+    "1.27-alpine"
+  ],
+  "library/node": [
+    "20-alpine",
+    "20-slim"
+  ],
+  "library/postgres": [
+    "16-alpine",
+    "15-alpine"
+  ],
+  "library/redis": [
+    "8.4.0"
+  ],
+  "library/registry": [
+    "3.0.0"
+  ],
+  "mayanedms/mayanedms": [
+    "v4.9.8"
+  ],
+  "memcached": [
+    "1.6.39-alpine"
+  ],
+  "metallb/controller": [
+    "v0.13.12"
+  ],
+  "metallb/speaker": [
+    "v0.13.12"
+  ],
+  "mysql": [
+    "8.4"
+  ],
+  "nginxinc/nginx-unprivileged": [
+    "1.29-alpine"
+  ],
+  "openpolicyagent/gatekeeper": [
+    "v3.21.0",
+    "v3.21.1"
+  ],
+  "openpolicyagent/gatekeeper-crds": [
+    "v3.21.1"
+  ],
+  "prom/memcached-exporter": [
+    "v0.15.4"
+  ],
+  "prometheus/alertmanager": [
+    "v0.27.0"
+  ],
+  "prometheus/node-exporter": [
+    "v1.8.2",
+    "v1.10.2"
+  ],
+  "prometheus/prometheus": [
+    "v2.54.1",
+    "v3.8.0"
+  ],
+  "prometheus-operator/prometheus-config-reloader": [
+    "v0.87.1",
+    "v0.89.0"
+  ],
+  "prometheus-operator/prometheus-operator": [
+    "v0.77.1",
+    "v0.89.0"
+  ],
+  "prometheus-stack/alertmanager": [
+    "v0.30.1"
+  ],
+  "prometheus-stack/grafana": [
+    "12.3"
+  ],
+  "prometheus-stack/kube-state-metrics": [
+    "v2.16.0"
+  ],
+  "prometheus-stack/node-exporter": [
+    "v1.10.2"
+  ],
+  "prometheus-stack/prometheus": [
+    "v3.9.1"
+  ],
+  "prometheus-stack/prometheus-config-reloader": [
+    "v0.88.1"
+  ],
+  "prometheus-stack/prometheus-operator": [
+    "v0.88.1"
+  ],
+  "prometheus-stack/pushgateway": [
+    "v1.11.2"
+  ],
+  "quay/calico/apiserver": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "quay/calico/cni": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "quay/calico/csi": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "quay/calico/goldmane": [
+    "v3.31.3"
+  ],
+  "quay/calico/kube-controllers": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "quay/calico/node": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "quay/calico/node-driver-registrar": [
+    "v3.31.3"
+  ],
+  "quay/calico/pod2daemon-flexvol": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "quay/calico/typha": [
+    "v3.27.0",
+    "v3.31.3"
+  ],
+  "quay/calico/whisker": [
+    "v3.31.3"
+  ],
+  "quay/calico/whisker-backend": [
+    "v3.31.3"
+  ],
+  "redpandadata/console": [
+    "v3.5.1"
+  ],
+  "redpandadata/redpanda": [
+    "v25.3.6"
+  ],
+  "sonatype/nexus3": [
+    "3.87.2"
+  ],
+  "strimzi/kafka": [
+    "0.50.0-kafka-4.1.1"
+  ],
+  "strimzi/operator": [
+    "0.50.0"
+  ],
+  "tigera/operator": [
+    "v1.30.4",
+    "v1.40.3"
+  ],
+  "velero/velero": [
+    "v1.13.0",
+    "v1.17.2",
+    "v1.17.1"
+  ],
+  "velero/velero-plugin-for-aws": [
+    "v1.9.0",
+    "v1.13.0"
+  ],
+  "velero/velero-plugin-for-csi": [
+    "v0.7.0"
+  ],
+  "velero/velero-plugin-for-gcp": [
+    "v1.9.0",
+    "v1.13.0"
+  ],
+  "zaproxy/zaproxy": [
+    "2.14.0"
+  ]
+}

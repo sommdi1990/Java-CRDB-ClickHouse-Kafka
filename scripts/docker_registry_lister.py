@@ -1,5 +1,6 @@
-import requests
 import json
+import requests
+
 
 def get_registry_images(registry_url, username=None, password=None):
     """
@@ -142,8 +143,8 @@ def save_to_file(data, filename="docker_images_report.json"):
 if __name__ == "__main__":
     # *** اطلاعات رجیستری خود را اینجا قرار دهید ***
     REGISTRY_URL = "https://rr.alefba2.ir"  # آدرس رجیستری شما
-    USERNAME = ""         # نام کاربری (اگر لازم است)
-    PASSWORD = ""         # رمز عبور (اگر لازم است)
+    USERNAME = "admin"  # نام کاربری (اگر لازم است)
+    PASSWORD = "asd123!@#"  # رمز عبور (اگر لازم است)
 
     # در صورتی که رجیستری عمومی است، USERNAME و PASSWORD را خالی بگذارید
     # USERNAME = None
